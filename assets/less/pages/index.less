@@ -22,11 +22,11 @@
 
 			&:hover{
 				text-decoration: none;
-				color: #000;
+				color: #777;
 			}
 
 			&.active{
-				color: #000;
+				color: #777;
 			}
 		}//a
 	}//li
@@ -36,7 +36,8 @@
 	padding-top: 50px;
 }//.logo
 
-.horizontal-nav{
+.horizontal-nav,
+.horizontal-search{
 	padding: 15px 0;
 	display: flex;
 	flex-direction: column;
@@ -222,10 +223,14 @@
 
 //Responsive
 @media (max-width: 992px){
+	.horizontal-search{
+		align-items: flex-end;
+	}
+
 	.horizontal-nav{
 		align-items: center;
-
-		.navigation:first-child{
+		
+		li:first-child{
 			padding-left: 0;
 		}
 	}
@@ -236,6 +241,10 @@
 			flex-direction: column;
 			text-align: center;
 		}//.container
+
+		p{
+			font-size: 2em;
+		}
 	}//.stn-contact
 
 	.services-col{
@@ -256,3 +265,6 @@
 		}//.facilis-text
 	}//.stn-facilis
 }//media
+
+@media (max-width: 768px) {
+}

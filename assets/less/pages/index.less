@@ -44,6 +44,10 @@
 	align-items: flex-end;
 }//.horizontal-nav
 
+	.trigger-menu{
+		display: none;
+	}
+
 //Banner
 //======
 .stn-banner{
@@ -217,7 +221,8 @@
 	span{
 		font-size: 1.09em;
 		color: #737373;
-		float: right;
+		display: block;
+		text-align: right;
 	}//span
 }//site-footer
 
@@ -267,4 +272,48 @@
 }//media
 
 @media (max-width: 768px) {
-}
+	.logo{
+		text-align: center;
+		padding-top: 10px;
+	}//.logo
+
+	.horizontal-search{
+		align-items: center;
+		padding: 0;
+	}//.horizontal-search
+
+	.navigation li{
+		display: none;
+		text-align: center;
+		padding: 5px 0;
+	}//.navigation li
+
+	.trigger-menu{
+		font-size: 1.18em;
+		display: block;
+		color: #fff;
+		transition: all .2s ease-in-out;
+		text-transform: uppercase;
+
+		&:hover{
+			text-decoration: none;
+			color: #777;
+		}
+		
+		&:focus{
+			text-decoration: none;
+			color: #fff;
+		}
+	}//.trigger-menu
+
+	.stn-contact{
+		font-size: .75em;
+	}//.stn-contact
+
+	.site-footer{
+		text-align: center;
+		span{
+			text-align: center;
+		}
+	}
+}//@media
